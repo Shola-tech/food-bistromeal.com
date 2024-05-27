@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <style>
+*{
+margin: 0 ; padding: 0;
+box-sizing: border-box;
+font-family: 'Times New Roman', Times, serif;
+outline: none; border: none;
+text-decoration: none;
+text-transform: capitalize;
+
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: snow;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: #85647f;
+    padding: .2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+    
+}
+header .logo{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+header .logo span{
+    color: plum;
+}
+ header .navbar a{
+    font-size: 25px;
+    margin: 1.5rem;
+    color: white;
+    padding: .5rem;
+    
+
+
+ }
+ header .navbar a:hover{
+    color: #503d79;
+    opacity: 0.5;
+    transition: calc(0.5s);
+    text-decoration: underline;
+    font: 1.2rem sans-serif;
+ }
+ header .navbar{
+    position: absolute;
+    top: 0; right: 0; left: 100;
+
+    
+
+
+ }
+ 
+
+.home{
+  
+    background-image: url(images/home2.jpg);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: right;
+    justify-content: center;
+
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+   padding: .9rem 3.5rem;
+   cursor: pointer;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+}
+.btn:hover{
+    background-color: black;
+    
+}
+.home .content{
+    max-width: 50rem;
+    
+}
+.home .content p{
+text-transform: capitalize;
+color: #fff;
+line-height: 1.8;
+font-weight: lighter;
+padding: 1rem 0;
+text-align: center;
+font-size: 30px;
+}
+
+.home .content h3{
+    font-size: 3rem;
+    color: #fff;
+    
+}
+.home .content span{
+    color: #503d79;
+    font-size:3.5rem ;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: palevioletred;
+    flex-wrap: wrap;
+}
+.about .heading{
+    text-align: center;
+    color: #000;
+
+}
+.about .heading span{
+    color: #85647f;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+.about .row .content p{
+    font-size: 1rem;
+    color: #fff;
+    padding: .5rem 0;
+    line-height: 1.8;
+}
+
+
+
+.container a{
+    text-transform: capitalize;
+    
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-underline-offset: none;
+    position: absolute;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #503d79;
+    cursor: pointer;
+
+}
+.menu{
+    min-height: 100vh;
+    background-color: #867683;
+    padding: 0.01rem 16px;
+    margin-bottom: 16px;
+    color: white;
+    display: block;
+text-transform: uppercase;
+
+
+   
+    
+}
+
+.menu h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+}
+.menu h1 span{
+    color: plum;
+}
+.menu .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.2rem;
+}
+.menu .row .box{
+    padding: 5rem;
+    background-color: transparent;
+    text-align: center;
+    border: #000;
+}
+.menu .row .box a img{
+    height: 10rem;
+}
+.menu .row .box:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+
+.check a{
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+.check a:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.order{
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 2rem 0;
+    padding-bottom: 3.5rem;
+    background: palevioletred;
+    width: 100%;
+}
+.order h3{
+    text-align: center;
+    font-size: 45px;
+    color: plum;
+    font-weight: 600;
+}
+.order h3 span{
+    color: white;
+}
+.order .book input{
+    border-radius: 15px;
+    width: 70%;
+    font-size: 1.2rem;
+    height: 45px;
+    color: #fff;
+    background-color: plum;
+}
+.order input::placeholder{
+    color: #85647f;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+}
+.order .book .yearpin input{
+    width: 35%;
+    height: 45px;
+    justify-content: space-between;
+    
+    
+}
+.send{
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+.send button{
+    padding-left: 1px;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    color: #fff;
+    background: plum;
+    cursor: pointer;
+
+}
+.send a{
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background: #000;
+    color: #fff;
+    padding: .6rem 2rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: 400;
+}
+footer .social{
+    display: flex;
+    margin-top: ;
+}
+ footer .social p {
+height: 2rem;
+margin-right: 0.5rem;
+text-align: center;
+width: 2rem;
+}
+.social a {
+align-items: center;
+display: flex;
+font-size: 1.5rem;
+height: 2rem;
+justify-content: center;
+opacity: 0.5;
+transition-property: opacity, transform;
+width: 2rem;
+will-change: opacity, transform;
+}
+.social a:hover {
+opacity: 1;
+transform: scale(1.25);
+}
+.social a:active {
+opacity: 1;
+transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 799px) {
+    .menu .row {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.2rem;
+}
+.home .content{
+    max-width: 30rem;
+    
+}
+.home{
+  
+  background-image: url(images/about.jpeg);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+
+}
+.home .content p{
+text-transform: capitalize;
+color: white;
+line-height: 1.3;
+font-weight: lighter;
+padding: .2rem 0;
+text-align: center;
+font-size: 20px;
+}
+
+.about .row{
+    display: block;
+    padding-bottom: 2rem;
+    align-items: center;
+    background: rgba(220, 225, 200, .7);
+    flex-wrap: wrap;
+}
+.about .row image img{
+    width: 100%;
+    height: 50vh;
+
+}
+}
+
+    </style>
+</head>
+
+<body>
+        
+            <header>
+                <a href="#" class="logo"><address>Bistro<span>delicacy</span></address></a>
+            
+            
+            <nav class="navbar">
+<a href="#home">home</a>
+<a href="#about">about</a>
+<a href="#menu">menu</a>
+<a href="#order">order now!</a>
+
+            </nav>
+            </header>
+        </div>
+            <div class="home" id="home">
+                <div class="content">
+                <h3> authentic <span>delicacy</span> </h3>
+                <p>try out our special superb balance  mixed of diets the taste is the difference, try us now. </p>
+                <a href="#order" class="btn">book an order</a>
+                </div>
+            </div>
+        <div class="about" id="about">
+<h1 class="heading"><span>about</span> us</h1>
+<div class="row">
+<div class="image">
+    <img src="images/salmon.jpeg" alt="">
+</div>
+<div class="content">
+    <h3>why choose us?</h3>
+    <p>we are passionate about bringing what satisfy your health to you, we also dedicated in giving you best delicacy </p>
+    <a href="#" class="btn">view more</a>
+</div>
+</div>
+
+        </div>
+    
+        <div class="menu" id="menu">
+            <h1>check out <span>what we have</span></h1>
+<div class="row">
+    <div class="box">
+
+        <a href="#"><img src="images/salmon.jpeg" alt="#"></a>
+<h1>italic nachos</h1>
+<p>egg / nachos</p>
+<p><b>$12.00</b></p>
+</div>
+<div class="box">
+    <a href="#"><img src="images/po.png" alt="#" ></a>
+    <h1>chips</h1>
+    <p>cheese / fried chips</p>
+    <p><b>$15.00</b></p>
+</div>
+
+<div class="box">
+    <a href="#"><img src="images/salmon.jpeg" alt="#" ></a>
+    <h1>grilled salmon</h1>
+    <p>salmon / chicken</p>
+    <p><b>$15.00</b></p>
+</div>
+<div class="box" >
+<a href="#"><img src="images/Pasta1.jpg" alt=""></a>
+<h1>pasta</h1>
+<p>egg / vegetable / pasta </p>
+<p><b>$14.00</b></p>
+</div>
+
+
+<div class="box">
+
+            <a href="#"><img src="images/soup.jpg" alt="#"></a>
+    <h1>sharwama</h1>
+    <p>chicken / wheat / salad</p>
+    <p><b>$12.00</b></p>
+</div>
+<div class="box">
+    <a href="#"><img src="images/about.jpeg" alt="#" ></a>
+    <h1>tomato soup</h1>
+    <p>tomato / lettuce</p>
+    <p><b>$15.00</b></p>
+</div>
+<div class="box">
+    <a href="#"><img src="images/bread.jpg" alt="#" ></a>
+    <h1>gallic bread</h1>
+    <p>galic / bread / cheese</p>
+    <p><b>$15.00</b></p>
+</div>
+
+    <div class="box">
+        <a href="#"><img src="images/potato.jpg" alt="#" ></a>
+        <h1>spicy potato</h1>
+        <p>pepper / chill/ sweet potato</p>
+        <p><b>$15.00</b></p>
+    </div>
+<div class="box" >
+    <a href="#"><img src="images/sharwama.jpg" alt=""></a>
+    <h1>spicy potato</h1>
+    <p>chiils / potato / pepper/ </p>
+    <p><b>$14.00</b></p>
+</div>
+    
+</div>
+
+<div class="check">
+    
+    <a href="#" class="me-bar-item me-button me-hover-black">«</a>
+    <a href="#" class="me-bar-item me-black me-button">1</a>
+    <a href="#" class="me-bar-item me-button me-hover-black">2</a>
+    <a href="#" class="me-bar-item me-button me-hover-black">3</a>
+    <a href="#" class="me-bar-item me-button me-hover-black">4</a>
+    <a href="#" class="me-bar-item me-button me-hover-black">»</a>
+</div>
+        </div>
+<div class="order" id="order">
+    <h3>send<span>order</span></h3>
+    <form action="#" class="book">
+<textarea name="order" id="order" cols="70" rows="8" placeholder="place an order" style="background-color: plum; border-radius: 15px; color: #fff; padding-left: 0.8rem; font-size: 1.2rem;"></textarea><br><br>
+<input type="number" placeholder="contact"><br><br>
+<input type="text" placeholder="address"><br><br>
+<input type="number" placeholder="card number" style="font-style: italic;"><br><br>
+<div class="yearpin">
+<input type="text" placeholder="YY/MM" >
+<input type="number" placeholder="OOO" style="font-style: italic;">
+</div>
+<div class="send">
+    <button>send</button>
+    <a href="#">edit</a>
+</div>
+    </form>
+</div>
+<footer>
+    <div class="social">
+        <p>
+        <a>
+        <i class="fab fa-twitter"></i>
+        </a>
+        </p>
+        <p>
+        <a>
+        <i class="fab fa-github"></i>
+        </a>
+    </p>
+    <p>
+        <a>
+        <i class="fab fa-linkedin"></i>
+        </a>
+    </p>
+    <p>
+        <a>
+        <i class="fab fa-facebook"></i>
+        </a>
+    </p>
+    <p>
+        <a>
+        <i class="fab fa-instagram"></i>
+        </a>
+    </p>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li>home</li>
+        </ul>
+    </div>
+
+</footer> 
+
+</body>
+
+</html>
